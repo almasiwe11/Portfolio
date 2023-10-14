@@ -2,8 +2,8 @@ import { IconType } from "react-icons"
 
 type NavType = {
   path?: string
-  emptyIcon: IconType
-  fullIcon: IconType
+  EmptyIcon: IconType
+  FullIcon: IconType
   hover: string
 }
 

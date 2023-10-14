@@ -11,26 +11,26 @@ export default function NavBar() {
     {
       path: "/",
       hover: "home",
-      emptyIcon: AiFillHome,
-      fullIcon: AiOutlineHome,
+      EmptyIcon: AiOutlineHome,
+      FullIcon: AiFillHome,
     },
     {
       path: "/projects",
       hover: "projects",
-      emptyIcon: BsBriefcase,
-      fullIcon: BsBriefcaseFill,
+      EmptyIcon: BsBriefcase,
+      FullIcon: BsBriefcaseFill,
     },
     {
       hover: "contact",
-      emptyIcon: GoMail,
-      fullIcon: GoMail,
+      EmptyIcon: GoMail,
+      FullIcon: GoMail,
     },
   ]
   return (
-    <div className="fixed flex-center left-12 h-screen flex-center w-14">
-      <div className="flex flex-col gap-10 w-full bg-gray rounded-full">
-        {nav.map((icon) => (
-          <IconLink key={icon.hover} icon={icon} />
+    <div className="fixed flex-center left-12 h-screen flex-center ">
+      <div className="flex flex-col gap-6 w-full bg-gray-main rounded-full items-center p-2">
+        {nav.map((icon, i) => (
+          <IconLink key={icon.hover} icon={icon} index={i} len={nav.length} />
         ))}
       </div>
     </div>

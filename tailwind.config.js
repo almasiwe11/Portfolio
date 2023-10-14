@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         orange: "rgb(255, 119, 0)",
-        gray: "#333639",
+        "gray-main": "#333639",
         "gray-text": "#94A3B8",
       },
       fontFamily: {
