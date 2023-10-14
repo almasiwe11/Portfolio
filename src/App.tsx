@@ -2,8 +2,9 @@ import Hero from "./Components/Hero/Hero"
 
 function App() {
   return (
-    <div className="text-blue-400 text-4xl font-bold">
+    <div className="font-dm">
       <Hero />
+      <div>0%</div>
     </div>
   )
 }
