@@ -27,7 +27,7 @@ export default function NavBar() {
     },
   ]
   return (
-    <div className="fixed flex-center left-12 h-screen flex-center ">
+    <div className="z-50 fixed flex-center left-12 h-screen flex-center navbar">
       <div className="flex flex-col gap-6 w-full bg-gray-main rounded-full items-center p-2">
         {nav.map((icon, i) => (
           <IconLink key={icon.hover} icon={icon} index={i} len={nav.length} />

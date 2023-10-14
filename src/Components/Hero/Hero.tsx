@@ -8,13 +8,21 @@ function Hero() {
   useEffect(() => {
     let requestId: number
     let currentLoad = 0
+    let startTime
 
-    function animate() {
+    function animate(timestamp) {
+      if (!startTime) {
+        startTime = timestamp
+      }
+
+      const elapsedTime = timestamp - startTime
+
       if (currentLoad < 100) {
         currentLoad += 0.44
         setLoad(currentLoad)
         requestId = requestAnimationFrame(animate)
       }
+      console.log("time", elapsedTime)
     }
 
     animate()
@@ -38,18 +46,23 @@ function Hero() {
     <>
       <section
         className="h-screen w-full bg-black font-inter"
-        // style={blurStyle}
+        style={blurStyle}
       >
         <div className="wrapper h-full flex items-center">
           <h1 className="text-8xl  text-white capitalize">
-            Hi, I&rsquo;m <span className="text-orange">Almas</span> <br /> A
-            passionate <br />{" "}
-            <span className="text-orange">front-end developer </span> <br />{" "}
-            with limitless potential.
+            <span className="first">
+              Hi, I&rsquo;m <span className="text-orange">Almas</span> <br />
+            </span>
+            <span className="second">
+              A passionate <br />
+            </span>
+            <span className="text-orange third">front-end developer </span>{" "}
+            <br />
+            <span className="fourth">with limitless potential.</span>
           </h1>
         </div>
       </section>
-      {/* <Loader load={load} numberLoaderStyle={numberLoaderStyle}/> */}
+      <Loader load={load} numberLoaderStyle={numberLoaderStyle} />
     </>
   )
 }
