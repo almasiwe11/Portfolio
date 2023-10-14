@@ -1,28 +1,30 @@
 import { useEffect, useState } from "react"
-import ProgressBar from "./ProgressBar"
 import Loader from "./Loader"
 
-function Hero() {
+function Hero({
+  animate,
+  setAnimate,
+}: {
+  animate: boolean
+  setAnimate: React.Dispatch<React.SetStateAction<boolean>>
+}) {
   const [load, setLoad] = useState(0)
 
   useEffect(() => {
     let requestId: number
     let currentLoad = 0
-    let startTime
 
-    function animate(timestamp) {
-      if (!startTime) {
-        startTime = timestamp
-      }
-
-      const elapsedTime = timestamp - startTime
-
+    function animate() {
       if (currentLoad < 100) {
         currentLoad += 0.44
         setLoad(currentLoad)
         requestId = requestAnimationFrame(animate)
+      } else {
+        setTimeout(() => {
+          setAnimate(false)
+          console.log("why")
+        }, 3800)
       }
-      console.log("time", elapsedTime)
     }
 
     animate()
@@ -30,9 +32,9 @@ function Hero() {
     return () => {
       cancelAnimationFrame(requestId)
     }
-  }, [])
+  }, [setAnimate])
 
-  const imageBlur = (100 - load) / 1
+  const imageBlur = animate ? (100 - load) / 1 : 0
 
   const blurStyle = {
     filter: `blur(${imageBlur}px)`,
@@ -50,19 +52,23 @@ function Hero() {
       >
         <div className="wrapper h-full flex items-center">
           <h1 className="text-8xl  text-white capitalize">
-            <span className="first">
+            <span className={`${animate ? "first" : ""} `}>
               Hi, I&rsquo;m <span className="text-orange">Almas</span> <br />
             </span>
-            <span className="second">
+            <span className={`${animate ? "second" : ""} `}>
               A passionate <br />
             </span>
-            <span className="text-orange third">front-end developer </span>{" "}
+            <span className={`${animate ? "third" : ""} text-orange `}>
+              front-end developer{" "}
+            </span>{" "}
             <br />
-            <span className="fourth">with limitless potential.</span>
+            <span className={`${animate ? "fourth" : ""} `}>
+              with limitless potential.
+            </span>
           </h1>
         </div>
       </section>
-      <Loader load={load} numberLoaderStyle={numberLoaderStyle} />
+      {animate && <Loader load={load} numberLoaderStyle={numberLoaderStyle} />}
     </>
   )
 }
