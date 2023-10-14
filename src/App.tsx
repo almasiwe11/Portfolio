@@ -1,10 +1,19 @@
-import Hero from "./Components/Hero/Hero"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import AppLayout from "./Components/AppLayout"
+import Home from "./Pages/Home/Home"
+import Projects from "./Pages/Projects/Projects"
 
 function App() {
   return (
     <div className="font-dm">
-      <Hero />
-      <div>0%</div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AppLayout />}>
+            <Route index element={<Home />}></Route>
+            <Route path="/projects" element={<Projects />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
