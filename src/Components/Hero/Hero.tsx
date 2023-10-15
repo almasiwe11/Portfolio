@@ -51,7 +51,7 @@ function Hero({
         style={blurStyle}
       >
         <div className="wrapper h-full flex items-center">
-          <h1 className="text-4xl md:text-6xl lg:text-8xl  text-white capitalize">
+          <h1 className="text-3xl sm:text-4xl med:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl  text-white capitalize">
             <span className={`${animate ? "first" : ""} `}>
               Hi, I&rsquo;m <span className="text-orange">Almas</span> <br />
             </span>
