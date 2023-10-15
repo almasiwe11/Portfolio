@@ -26,8 +26,8 @@ const projects: ProjectType[] = [
       "Retactic is a Cybersecurity as a Service Startup. Our goal for this website was to elevate the brnad's visibility and maximize watlist conversions.",
     alt: "eCommerce website screenshot",
     tech: [skills.react, skills.ts, skills.tailwind],
-    liveUrl: "",
-    gitHubUrl: "",
+    liveUrl: "https://app.netlify.com/sites/flourishing-donut-bc8a74",
+    gitHubUrl: "https://github.com/almasiwe11/Ecommerce",
   },
   {
     featured: false,
@@ -37,8 +37,8 @@ const projects: ProjectType[] = [
       "Retactic is a Cybersecurity as a Service Startup. Our goal for this website was to elevate the brnad's visibility and maximize watlist conversions.",
     alt: "Photosnap website screenshot",
     tech: [skills.react, skills.ts, skills.tailwind],
-    liveUrl: "",
-    gitHubUrl: "",
+    liveUrl: "https://singular-platypus-8dcc09.netlify.app/",
+    gitHubUrl: "https://github.com/almasiwe11/PhotoSnap",
   },
   {
     featured: false,
@@ -48,8 +48,8 @@ const projects: ProjectType[] = [
       "Retactic is a Cybersecurity as a Service Startup. Our goal for this website was to elevate the brnad's visibility and maximize watlist conversions.",
     alt: "Memory game screenshot",
     tech: [skills.react, skills.ts, skills.tailwind],
-    liveUrl: "",
-    gitHubUrl: "",
+    liveUrl: "https://sage-crumble-d1145b.netlify.app/",
+    gitHubUrl: "https://github.com/almasiwe11/MemoryGame",
   },
   {
     featured: false,
@@ -58,9 +58,9 @@ const projects: ProjectType[] = [
     explanation:
       "Retactic is a Cybersecurity as a Service Startup. Our goal for this website was to elevate the brnad's visibility and maximize watlist conversions.",
     alt: "Movie site screenshot",
-    tech: [skills.react, skills.ts, skills.sass],
-    liveUrl: "",
-    gitHubUrl: "",
+    tech: [skills.react, skills.sass],
+    liveUrl: "https://elegant-douhua-dccc2e.netlify.app/",
+    gitHubUrl: "https://github.com/almasiwe11/Entertainment-WebApp",
   },
 ]
 
