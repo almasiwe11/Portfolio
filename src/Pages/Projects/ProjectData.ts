@@ -19,6 +19,17 @@ type ProjectType = {
 
 const projects: ProjectType[] = [
   {
+    featured: true,
+    image: gameOfLife,
+    name: "Game of Life - Habit Tracker",
+    explanation:
+      "Retactic is a Cybersecurity as a Service Startup. Our goal for this website was to elevate the brnad's visibility and maximize watlist conversions.",
+    alt: "habit tracker app screenshot",
+    tech: [skills.react, skills.ts, skills.tailwind],
+    liveUrl: "https://gorgeous-crumble-52bc11.netlify.app/",
+    gitHubUrl: "https://github.com/almasiwe11/Game-of-Life",
+  },
+  {
     featured: false,
     image: eCommerce,
     name: "e-Commerce Website",
