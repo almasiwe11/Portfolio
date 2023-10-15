@@ -1,4 +1,5 @@
 import Hero from "../../Components/Hero/Hero"
+import Projects from "../Projects/Projects"
 
 export default function Home({
   animate,
@@ -10,6 +11,7 @@ export default function Home({
   return (
     <>
       <Hero animate={animate} setAnimate={setAnimate} />
+      <Projects />
     </>
   )
 }

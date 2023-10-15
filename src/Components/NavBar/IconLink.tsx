@@ -8,7 +8,7 @@ type Props = {
   len: number
 }
 export default function IconLink({ icon, index, len }: Props) {
-  const { FullIcon, EmptyIcon, hover } = icon
+  const { FullIcon, EmptyIcon } = icon
   const path = icon.path
 
   return (
