@@ -6,8 +6,9 @@ type Props = {
 
 export default function SkillCard({ skill }: Props) {
   const { Icon, name } = skill
+  // border cursor-pointer border-gray-main rounded-xl h-36 flex flex-col gap-3 justify-center items-center
   return (
-    <div className="card border cursor-pointer border-gray-main rounded-xl h-36 flex flex-col gap-3 justify-center items-center">
+    <div className="card ">
       <span className="">
         <Icon
           className={`${
