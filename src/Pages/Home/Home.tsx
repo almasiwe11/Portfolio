@@ -10,7 +10,9 @@ export default function Home({
 }) {
   return (
     <>
-      <Hero animate={animate} setAnimate={setAnimate} />
+      <div className="h-screen">
+        <Hero animate={animate} setAnimate={setAnimate} />
+      </div>
       <Projects />
     </>
   )

@@ -7,4 +7,17 @@ type NavType = {
   hover: string
 }
 
-export type { NavType }
+type TechType = {
+  name: string
+  Icon: IconType
+  color: string
+}
+
+type SkillsType = {
+  react: TechType
+  tailwind: TechType
+  ts: TechType
+  sass: TechType
+}
+
+export type { NavType, TechType, SkillsType }

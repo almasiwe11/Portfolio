@@ -7,6 +7,8 @@ export default {
         orange: "rgb(255, 119, 0)",
         "gray-main": "#333639",
         "gray-text": "#94A3B8",
+        "gray-light": "#f3f4f5",
+        "gray-dark-text": "#423f3f",
       },
       fontFamily: {
         dm: "DM Sans, sans-serif",
