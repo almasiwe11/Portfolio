@@ -7,11 +7,25 @@ type Props = {
 export default function SkillCard({ skill }: Props) {
   const { Icon, name } = skill
   return (
-    <div className="card border cursor-pointer border-gray-main rounded-xl p-8 flex flex-col gap-3 justify-center items-center">
+    <div className="card border cursor-pointer border-gray-main rounded-xl h-36 flex flex-col gap-3 justify-center items-center">
       <span className="">
-        <Icon className="h-7 w-7" />
+        <Icon
+          className={`${
+            name === "styled components"
+              ? "h-14 w-14 mt-1"
+              : name === "node JS"
+              ? "w-11 h-11"
+              : "h-8 w-8"
+          }`}
+        />
       </span>
-      <span className="text-xl capitalize text-center">{name}</span>
+      <span
+        className={`text-xl max-w-xs capitalize text-center w-32 ${
+          name === "styled components" && "-mt-5"
+        } ${name === "node JS" && "-mt-3"}`}
+      >
+        {name}
+      </span>
     </div>
   )
 }
