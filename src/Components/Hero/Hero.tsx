@@ -22,7 +22,6 @@ function Hero({
       } else {
         setTimeout(() => {
           setAnimate(false)
-          console.log("why")
         }, 3800)
       }
     }

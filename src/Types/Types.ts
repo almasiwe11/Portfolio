@@ -18,6 +18,14 @@ type SkillsType = {
   tailwind: TechType
   ts: TechType
   sass: TechType
+  html: TechType
+  css: TechType
+  js: TechType
+  redux: TechType
+  github: TechType
+  git: TechType
+  styled: TechType
+  node: TechType
 }
 
 export type { NavType, TechType, SkillsType }

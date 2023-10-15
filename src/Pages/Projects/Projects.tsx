@@ -5,7 +5,6 @@ import { useLocation } from "react-router"
 export default function Projects() {
   const scrollRef = useRef<HTMLDivElement | null>(null)
   const location = useLocation()
-  console.log(location.pathname)
   useEffect(() => {
     if (location.pathname === "/projects") {
       scrollRef.current?.scrollIntoView()
