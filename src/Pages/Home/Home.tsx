@@ -25,7 +25,7 @@ export default function Home({
       </div>
       <Projects />
 
-      <div className="relative z-40">
+      <div className="relative z-30">
         <Skills />
         <div
           className="absolute -bottom-1 w-full h-2"

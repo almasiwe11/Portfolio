@@ -162,6 +162,57 @@
   animation: showFooter 0.7s ease-out forwards;
 }
 
+.hamburger {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  top: 0;
+  background: rgb(255, 119, 0);
+  left: 0;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(9px);
+}
+
+.hamburger-bottom {
+  transform: translateY(18px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(5px) translateX(-5px);
+}
+
+.menu {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backgrop-filter: blur(10px);
+}
+
 @keyframes showFooter {
   99% {
     opacity: 0.4;

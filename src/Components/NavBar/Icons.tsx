@@ -7,6 +7,7 @@ type Props = {
   FullIcon: IconType
   len: number
   path?: string
+  mobile?: boolean
 }
 export default function Icons({
   index,
@@ -14,6 +15,7 @@ export default function Icons({
   FullIcon,
   len,
   path,
+  mobile,
 }: Props) {
   const location = useLocation()
   let active = false

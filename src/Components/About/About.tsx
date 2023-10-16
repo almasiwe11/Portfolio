@@ -41,7 +41,7 @@ export default function About({ aboutFirst = true }: { aboutFirst?: boolean }) {
               line of code I write, I strive to improve myself and create
               beautiful and perfectly functional projects.
             </span>
-            <span className="">
+            <span>
               Driven by a strong work ethic and a commitment to
               self-improvement, I embrace every coding challenge as an
               opportunity to grow. I thrive on solving complex problems and have
@@ -50,7 +50,7 @@ export default function About({ aboutFirst = true }: { aboutFirst?: boolean }) {
             </span>
             <Button
               linkTo="mailto:awakenedduck@gmail.com"
-              className="ml-0 xl:ml-48 self-start z-50 border-black"
+              className="ml-0 self-center xl:ml-48 lg:self-start z-50 border-black"
               text="Hire Me"
             />
           </div>
