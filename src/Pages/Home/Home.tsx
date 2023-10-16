@@ -28,7 +28,7 @@ export default function Home({
       <div className="relative z-30">
         <Skills />
         <div
-          className="absolute -bottom-1 w-full h-12"
+          className="absolute -bottom-1 w-full h-96"
           ref={skillsRef}
           id="skills"
         ></div>
