@@ -45,12 +45,11 @@ export default function IconLink({
         />
         {mobile && (
           <span
-            className={` capitalize text-lg ${
+            className={`capitalize text-lg ${
               active && mobile ? "text-black" : "text-white"
             }`}
           >
-            {" "}
-            {hover}{" "}
+            {hover}
           </span>
         )}
       </Link>

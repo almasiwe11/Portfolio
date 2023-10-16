@@ -27,7 +27,7 @@ export default function useAnimate({ animating, setAnimate }: Props) {
     setTimeout(() => {
       document.body.style.overflow = "auto"
       document.body.style.overflowX = "hidden"
-    }, 5300)
+    }, 5100)
     animate()
 
     return () => {
