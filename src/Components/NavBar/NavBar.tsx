@@ -3,6 +3,7 @@ import { AiFillHome } from "react-icons/ai"
 import { BsBriefcase } from "react-icons/bs"
 import { BsBriefcaseFill } from "react-icons/bs"
 import { GoMail } from "react-icons/go"
+import { BsFillPersonFill } from "react-icons/bs"
 import { NavType } from "../../Types/Types"
 import IconLink from "./IconLink"
 
@@ -17,6 +18,12 @@ export default function NavBar() {
     {
       path: "/projects",
       hover: "projects",
+      EmptyIcon: BsBriefcase,
+      FullIcon: BsBriefcaseFill,
+    },
+    {
+      path: "/about",
+      hover: "about",
       EmptyIcon: BsBriefcase,
       FullIcon: BsBriefcaseFill,
     },

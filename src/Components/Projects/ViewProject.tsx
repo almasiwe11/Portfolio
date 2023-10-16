@@ -1,4 +1,4 @@
-import Button from "../../Components/Button"
+import Button from "../Button"
 import { BsGithub } from "react-icons/bs"
 
 type Props = {

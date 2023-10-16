@@ -1,6 +1,7 @@
 import Hero from "../../Components/Hero/Hero"
 import Skills from "../../Components/Skills/Skills"
-import Projects from "../Projects/Projects"
+import Projects from "../../Components/Projects/Projects"
+import About from "../../Components/About/About"
 
 export default function Home({
   animate,
@@ -16,6 +17,9 @@ export default function Home({
       </div>
       <Projects />
       <Skills />
+      <div className="h-screen">
+        <About />
+      </div>
     </>
   )
 }
