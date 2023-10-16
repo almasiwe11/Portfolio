@@ -6,7 +6,7 @@ import { useLocation } from "react-router"
 import RespImage from "../RespImage"
 import Button from "../Button"
 
-export default function About({ aboutFirst }: { aboutFirst?: boolean }) {
+export default function About({ aboutFirst = true }: { aboutFirst?: boolean }) {
   const scrollRef = useRef<HTMLDivElement | null>(null)
   const location = useLocation()
   useEffect(() => {
@@ -16,8 +16,8 @@ export default function About({ aboutFirst }: { aboutFirst?: boolean }) {
   }, [location.pathname])
   return (
     <div
-      className={`bg-gray-light py-32 lg:py-24 lg:h-screen fixed top-0 w-full h-full  ${
-        aboutFirst ? "z-20" : "-z-50"
+      className={`bg-gray-light py-32 lg:py-24 lg:h-screen  top-0 w-full h-full  ${
+        aboutFirst ? "z-20 fixed" : "-z-50 hidden"
       }`}
       ref={scrollRef}
     >

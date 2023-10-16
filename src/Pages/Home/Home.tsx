@@ -4,7 +4,6 @@ import Skills from "../../Components/Skills/Skills"
 import Projects from "../../Components/Projects/Projects"
 import About from "../../Components/About/About"
 import { useLocation } from "react-router"
-import Footer from "../../Components/Footer/Footer"
 
 export default function Home({
   animate,
@@ -13,13 +12,21 @@ export default function Home({
   animate: boolean
   setAnimate: React.Dispatch<React.SetStateAction<boolean>>
 }) {
-  const scrollRef = useRef<HTMLDivElement | null>(null)
   const skillsRef = useRef<HTMLDivElement | null>(null)
   const location = useLocation()
   const [aboutFirst, setAboutFirst] = useState(false)
   useEffect(() => {
+    const handleBeforeUnload = () => {
+      window.scrollTo(0, 0)
+    }
+
+    window.addEventListener("beforeunload", handleBeforeUnload)
     if (location.pathname === "/") {
-      scrollRef.current?.scrollIntoView()
+      window.scrollTo(0, 0)
+    }
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload)
     }
   }, [location.pathname])
 
@@ -41,9 +48,9 @@ export default function Home({
 
   return (
     <>
-      <div className="h-screen" ref={scrollRef}>
+      <div className="h-screen">
         <div className="h-full">
-          <Hero animate={animate} setAnimate={setAnimate} />
+          <Hero animating={animate} setAnimate={setAnimate} />
         </div>
       </div>
       <Projects />
