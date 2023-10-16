@@ -15,10 +15,10 @@ export default function Skills() {
   }, [])
 
   return (
-    <div className=" text-white py-16">
+    <div className="bg-black -z-10 text-white py-16">
       <h1 className="text-center text-3xl text-white mb-8">Skills</h1>
-      <div className="grid-container">
-        <div className="gg max-w-[42rem] mx-auto w-[90%]">
+      <div className="grid-container z-10">
+        <div className="gg max-w-[42rem] z-10 mx-auto w-[90%] grid grid-cols-3">
           {allSkills.map((skill) => (
             <SkillCard key={skill.name} skill={skill} />
           ))}

@@ -119,8 +119,6 @@ html {
 .gg {
   display: grid;
   gap: 0.5rem;
-  grid-template-columns: repeat(auto-fit, 250px);
-  grid-auto-rows: 150px;
   position: relative;
 }
 
