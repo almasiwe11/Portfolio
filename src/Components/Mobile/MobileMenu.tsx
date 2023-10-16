@@ -26,6 +26,7 @@ export default function MobileMenu({
       className={`menu md:hidden z-40 w-full fixed inset-0 ${
         isOpen ? "flex" : "hidden"
       }`}
+      onClick={() => setIsOpen(false)}
     >
       <div className="flex-center w-full">
         <div className="flex flex-col gap-4">
