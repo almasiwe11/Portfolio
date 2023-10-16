@@ -1,9 +1,9 @@
-import { useRef, useEffect, useState } from "react"
+import { useRef } from "react"
 import Hero from "../../Components/Hero/Hero"
 import Skills from "../../Components/Skills/Skills"
 import Projects from "../../Components/Projects/Projects"
 import About from "../../Components/About/About"
-import { useLocation } from "react-router"
+import useObserver from "../../Hooks/useObserver"
 
 export default function Home({
   animate,
@@ -13,38 +13,8 @@ export default function Home({
   setAnimate: React.Dispatch<React.SetStateAction<boolean>>
 }) {
   const skillsRef = useRef<HTMLDivElement | null>(null)
-  const location = useLocation()
-  const [aboutFirst, setAboutFirst] = useState(false)
-  useEffect(() => {
-    const handleBeforeUnload = () => {
-      window.scrollTo(0, 0)
-    }
 
-    window.addEventListener("beforeunload", handleBeforeUnload)
-    if (location.pathname === "/") {
-      window.scrollTo(0, 0)
-    }
-
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload)
-    }
-  }, [location.pathname])
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const skill = entries.find((enty) => enty.target.id === "skills")
-
-      if (skill?.isIntersecting) {
-        setAboutFirst(true)
-      }
-
-      if (!skill?.isIntersecting) {
-        setAboutFirst(false)
-      }
-    })
-
-    observer.observe(skillsRef.current!)
-  }, [])
+  const { aboutFirst } = useObserver({ skillsRef })
 
   return (
     <>
