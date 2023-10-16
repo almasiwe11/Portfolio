@@ -8,7 +8,7 @@ export default function AppLayout() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <div className="">
-      <MobileMenu isOpen={isOpen} />
+      <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
       {/*  */}
       <NavBar />

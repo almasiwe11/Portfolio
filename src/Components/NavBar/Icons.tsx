@@ -23,15 +23,17 @@ export default function Icons({
   return (
     <div
       className={`w-full flex-center cursor-pointer ${
-        index === 0 || index === len - 1 ? "rounded-full" : "rounded-lg"
-      } ${
-        active && "bg-white"
+        index === 0 || (index === len - 1 && mobile)
+          ? "rounded-full"
+          : "rounded-lg"
+      } ${active && !mobile ? "bg-white" : "bg-transparent"} ${
+        mobile && "w-12"
       } duration-300 ease-in-out hover:bg-zinc-500 p-2 group`}
     >
       {active ? (
-        <FullIcon className="text-orange h-5 w-5 group-hover:text-orange duration-300 ease-in-out" />
+        <FullIcon className="text-orange lg:h-5 lg:w-5 w-6 h-6 group-hover:text-orange duration-300 ease-in-out" />
       ) : (
-        <EmptyIcon className="text-white h-5 w-5 group-hover:text-orange duration-300 ease-in-out" />
+        <EmptyIcon className="text-white lg:h-5 lg:w-5 w-6 h-6 group-hover:text-orange duration-300 ease-in-out" />
       )}
     </div>
   )
