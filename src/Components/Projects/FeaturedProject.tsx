@@ -1,6 +1,9 @@
+import { useEffect } from "react"
 import { ProjectType } from "./ProjectData"
 import ProjectTech from "./ProjectTech"
 import ViewProject from "./ViewProject"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 type Props = {
   project: ProjectType
@@ -8,9 +11,15 @@ type Props = {
 
 export default function FeaturedProject({ project }: Props) {
   const { image, gitHubUrl, liveUrl, name, explanation, alt, tech } = project
+  useEffect(() => {
+    AOS.init({ duration: 1500 })
+  }, [])
 
   return (
-    <div className="col-span-2 flex flex-col lg:grid grid-cols-2 my-8 gap-8">
+    <div
+      className="col-span-2 flex flex-col lg:grid grid-cols-2 my-8 gap-8"
+      data-aos="zoom-in"
+    >
       <img
         src={image}
         alt={alt}
