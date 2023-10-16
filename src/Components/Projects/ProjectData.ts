@@ -23,7 +23,7 @@ const projects: ProjectType[] = [
     image: gameOfLife,
     name: "Game of Life - Habit Tracker",
     explanation:
-      "Desktop Only! Habit Traker that I created for myself to be more consistent and to track my progress in different fields. React Redux for complex state management. React Router, typescript for typesafety and tailwind were used to complete this project.",
+      "Desktop Only! Habit Traker that I created for myself to be more consistent and to track my endeavors in different fields. React Redux for complex state management. React Router, Typescript for typesafety and Tailwind were used to complete this project. Bundle split.",
     alt: "habit tracker app screenshot",
     tech: [skills.react, skills.ts, skills.tailwind],
     liveUrl: "https://gorgeous-crumble-52bc11.netlify.app/",
@@ -34,7 +34,7 @@ const projects: ProjectType[] = [
     image: eCommerce,
     name: "e-Commerce Website",
     explanation:
-      "A Frontend Mentor design, an interactive ecommerce site using React Router and Context API and useReducer for state management.",
+      "A Frontend Mentor design, an interactive ecommerce site using React Router and Context API and useReducer for state management. Bundle split.",
     alt: "eCommerce website screenshot",
     tech: [skills.react, skills.ts, skills.tailwind],
     liveUrl: "https://app.netlify.com/sites/flourishing-donut-bc8a74",
@@ -45,7 +45,7 @@ const projects: ProjectType[] = [
     image: photosnap,
     name: "Website",
     explanation:
-      "Frontend Mentor design, an ineeractive multipage website using React Router and reusable components.",
+      "Frontend Mentor design, an ineeractive multipage website using React Router and reusable components. Bundle split.",
     alt: "Photosnap website screenshot",
     tech: [skills.react, skills.ts, skills.tailwind],
     liveUrl: "https://singular-platypus-8dcc09.netlify.app/",
