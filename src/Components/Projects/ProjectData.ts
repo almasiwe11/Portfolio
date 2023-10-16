@@ -37,7 +37,7 @@ const projects: ProjectType[] = [
       "A Frontend Mentor design, an interactive ecommerce site using React Router and Context API and useReducer for state management. Bundle split.",
     alt: "eCommerce website screenshot",
     tech: [skills.react, skills.ts, skills.tailwind],
-    liveUrl: "https://app.netlify.com/sites/flourishing-donut-bc8a74",
+    liveUrl: "https://flourishing-donut-bc8a74.netlify.app",
     gitHubUrl: "https://github.com/almasiwe11/Ecommerce",
   },
   {
