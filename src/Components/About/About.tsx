@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react"
 import art from "/art.jpg"
 import { useLocation } from "react-router"
 
-export default function About() {
+export default function About({ footerFirst }: { footerFirst?: boolean }) {
   const scrollRef = useRef<HTMLDivElement | null>(null)
   const location = useLocation()
   useEffect(() => {
@@ -11,7 +11,12 @@ export default function About() {
     }
   }, [location.pathname])
   return (
-    <div className="bg-white py-24 lg:h-screen" ref={scrollRef}>
+    <div
+      className={`bg-white py-24 lg:h-screen fixed inset-0  ${
+        footerFirst ? "-z-20" : "-z-50"
+      }`}
+      ref={scrollRef}
+    >
       <div className="wrapper">
         <h1 className="text-3xl font-bold text-black text-center mb-16">
           About Me

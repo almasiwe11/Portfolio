@@ -46,7 +46,7 @@ function Hero({
   return (
     <>
       <section
-        className="h-screen w-full bg-black font-inter fixed -z-10"
+        className="h-screen w-full bg-black font-inter fixed -z-40"
         style={blurStyle}
       >
         <div className="wrapper h-full flex items-center">
