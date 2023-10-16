@@ -4,6 +4,7 @@ import Skills from "../../Components/Skills/Skills"
 import Projects from "../../Components/Projects/Projects"
 import About from "../../Components/About/About"
 import { useLocation } from "react-router"
+import Footer from "../../Components/Footer/Footer"
 
 export default function Home({
   animate,
@@ -13,9 +14,9 @@ export default function Home({
   setAnimate: React.Dispatch<React.SetStateAction<boolean>>
 }) {
   const scrollRef = useRef<HTMLDivElement | null>(null)
-  const layerRef = useRef<HTMLDivElement | null>(null)
+  const skillsRef = useRef<HTMLDivElement | null>(null)
   const location = useLocation()
-  const [footerFirst, setFooterFirst] = useState(false)
+  const [aboutFirst, setAboutFirst] = useState(false)
   useEffect(() => {
     if (location.pathname === "/") {
       scrollRef.current?.scrollIntoView()
@@ -24,31 +25,41 @@ export default function Home({
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0]
+      const skill = entries.find((enty) => enty.target.id === "skills")
 
-      if (!entry.isIntersecting) {
-        setFooterFirst(true)
+      if (skill?.isIntersecting) {
+        setAboutFirst(true)
       }
-      if (entry.isIntersecting) {
-        setFooterFirst(false)
+
+      if (!skill?.isIntersecting) {
+        setAboutFirst(false)
       }
     })
 
-    observer.observe(layerRef.current!)
+    observer.observe(skillsRef.current!)
   }, [])
 
   return (
     <>
       <div className="h-screen" ref={scrollRef}>
-        <div ref={layerRef} className=" h-full">
+        <div className="h-full">
           <Hero animate={animate} setAnimate={setAnimate} />
         </div>
       </div>
       <Projects />
-      <Skills />
-      <div className="h-screen">
-        <About footerFirst={footerFirst} />
+
+      <div className="relative z-40">
+        <Skills />
+        <div
+          className="absolute -bottom-1 w-full h-2"
+          ref={skillsRef}
+          id="skills"
+        ></div>
       </div>
+      <div className="h-screen">
+        <About aboutFirst={aboutFirst} />
+      </div>
+      {/* <Footer showFooter={showFooter} /> */}
     </>
   )
 }

@@ -10,6 +10,7 @@ type Props = {
 export default function IconLink({ icon, index, len }: Props) {
   const { FullIcon, EmptyIcon } = icon
   const path = icon.path
+  const openNew = icon.openNew
 
   return (
     <>
@@ -23,15 +24,17 @@ export default function IconLink({ icon, index, len }: Props) {
             path={path}
           />
         </Link>
-      ) : (
-        <>
+      ) : openNew ? (
+        <a href={openNew} className="animate-bounce">
           <Icons
             EmptyIcon={EmptyIcon}
             index={index}
             FullIcon={FullIcon}
             len={len}
           />
-        </>
+        </a>
+      ) : (
+        ""
       )}
     </>
   )

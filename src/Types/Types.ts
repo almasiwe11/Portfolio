@@ -5,6 +5,7 @@ type NavType = {
   EmptyIcon: IconType
   FullIcon: IconType
   hover: string
+  openNew?: string
 }
 
 type TechType = {

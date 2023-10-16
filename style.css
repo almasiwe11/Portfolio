@@ -160,3 +160,19 @@ html {
 .grid-container > * {
   grid-area: a;
 }
+
+.footer {
+  opacity: 0.4;
+  bottom: -4rem;
+  animation: showFooter 0.7s ease-out forwards;
+}
+
+@keyframes showFooter {
+  99% {
+    opacity: 0.4;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}

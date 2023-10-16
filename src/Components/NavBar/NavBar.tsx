@@ -4,6 +4,7 @@ import { BsBriefcase } from "react-icons/bs"
 import { BsBriefcaseFill } from "react-icons/bs"
 import { GoMail } from "react-icons/go"
 import { BsFillPersonFill } from "react-icons/bs"
+import { BsPerson } from "react-icons/bs"
 import { NavType } from "../../Types/Types"
 import IconLink from "./IconLink"
 
@@ -24,13 +25,14 @@ export default function NavBar() {
     {
       path: "/about",
       hover: "about",
-      EmptyIcon: BsBriefcase,
-      FullIcon: BsBriefcaseFill,
+      EmptyIcon: BsPerson,
+      FullIcon: BsFillPersonFill,
     },
     {
       hover: "contact",
       EmptyIcon: GoMail,
       FullIcon: GoMail,
+      openNew: "mailto:awakenedduck@gmail.com",
     },
   ]
   return (
