@@ -23,7 +23,7 @@ const projects: ProjectType[] = [
     image: gameOfLife,
     name: "Game of Life - Habit Tracker",
     explanation:
-      "Retactic is a Cybersecurity as a Service Startup. Our goal for this website was to elevate the brnad's visibility and maximize watlist conversions.",
+      "Desktop Only! Habit Traker that I created for myself to be more consistent and to track my progress in different fields. React Redux for complex state management. React Router, typescript for typesafety and tailwind were used to complete this project.",
     alt: "habit tracker app screenshot",
     tech: [skills.react, skills.ts, skills.tailwind],
     liveUrl: "https://gorgeous-crumble-52bc11.netlify.app/",
@@ -34,7 +34,7 @@ const projects: ProjectType[] = [
     image: eCommerce,
     name: "e-Commerce Website",
     explanation:
-      "Retactic is a Cybersecurity as a Service Startup. Our goal for this website was to elevate the brnad's visibility and maximize watlist conversions.",
+      "A Frontend Mentor design, an interactive ecommerce site using React Router and Context API and useReducer for state management.",
     alt: "eCommerce website screenshot",
     tech: [skills.react, skills.ts, skills.tailwind],
     liveUrl: "https://app.netlify.com/sites/flourishing-donut-bc8a74",
@@ -45,7 +45,7 @@ const projects: ProjectType[] = [
     image: photosnap,
     name: "Website",
     explanation:
-      "Retactic is a Cybersecurity as a Service Startup. Our goal for this website was to elevate the brnad's visibility and maximize watlist conversions.",
+      "Frontend Mentor design, an ineeractive multipage website using React Router and reusable components.",
     alt: "Photosnap website screenshot",
     tech: [skills.react, skills.ts, skills.tailwind],
     liveUrl: "https://singular-platypus-8dcc09.netlify.app/",
@@ -56,7 +56,7 @@ const projects: ProjectType[] = [
     image: memory,
     name: "Multiplayer Memory Game",
     explanation:
-      "Retactic is a Cybersecurity as a Service Startup. Our goal for this website was to elevate the brnad's visibility and maximize watlist conversions.",
+      "Multiplayer Memory game, used Context API and useReducer for state management. Tracking best results in localStorage for a singleplayer.",
     alt: "Memory game screenshot",
     tech: [skills.react, skills.ts, skills.tailwind],
     liveUrl: "https://sage-crumble-d1145b.netlify.app/",
@@ -67,7 +67,7 @@ const projects: ProjectType[] = [
     image: movie,
     name: "Movies website",
     explanation:
-      "Retactic is a Cybersecurity as a Service Startup. Our goal for this website was to elevate the brnad's visibility and maximize watlist conversions.",
+      "Frontend Mentor design, Web Entertainment app with search and bookmark functionality. React Router for page navigation.",
     alt: "Movie site screenshot",
     tech: [skills.react, skills.sass],
     liveUrl: "https://elegant-douhua-dccc2e.netlify.app/",

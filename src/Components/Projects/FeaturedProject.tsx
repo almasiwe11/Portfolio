@@ -18,9 +18,9 @@ export default function FeaturedProject({ project }: Props) {
       />
       <div className="flex flex-col justify-center gap-3 lg:gap-2 mt-5 px-6">
         <h2 className="text-3xl font-semibold text-left lg:text-center my-2">
-          {project.name}
+          {name}
         </h2>
-        <p className="text-gray-dark-text text-lg">{project.explanation}</p>
+        <p className="text-gray-dark-text text-lg">{explanation}</p>
         <ProjectTech techs={tech} />
         <ViewProject gitUrl={gitHubUrl} livUrl={liveUrl} />
       </div>
