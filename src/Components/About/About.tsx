@@ -17,7 +17,7 @@ export default function About({ aboutFirst = true }: { aboutFirst?: boolean }) {
   return (
     <div
       className={`bg-gray-light py-32 lg:py-24 lg:h-screen  top-0 w-full h-full  ${
-        aboutFirst ? "z-20 fixed" : "-z-50 hidden"
+        aboutFirst ? "z-20 block lg:fixed" : "-z-50 lg:hidden"
       }`}
       ref={scrollRef}
     >

@@ -11,7 +11,7 @@ export default function Projects() {
     }
   }, [location.pathname])
   return (
-    <div className=" bg-gray-light font-inter py-16" ref={scrollRef}>
+    <div className=" bg-gray-light font-inter py-16 z-30" ref={scrollRef}>
       <div className="wrapper">
         <h1 className="text-black text-3xl uppercase w-full text-center mb-12 ">
           Projects
