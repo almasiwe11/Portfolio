@@ -20,11 +20,13 @@ export default function FeaturedProject({ project }: Props) {
       className="col-span-2 flex flex-col lg:grid grid-cols-2 my-8 gap-8"
       data-aos="zoom-in"
     >
-      <img
-        src={image}
-        alt={alt}
-        className="rounded-xl crusor-pointer cursor-pointer duration-300 ease-in-out hover:shadow-xl"
-      />
+      <a href={liveUrl} rel="noreferrer" target="_blank">
+        <img
+          src={image}
+          alt={alt}
+          className="rounded-xl crusor-pointer cursor-pointer duration-300 ease-in-out hover:shadow-xl"
+        />
+      </a>
       <div className="flex flex-col justify-center gap-3 lg:gap-2 mt-5 px-6">
         <h2 className="text-3xl font-semibold text-left lg:text-center my-2">
           {name}
