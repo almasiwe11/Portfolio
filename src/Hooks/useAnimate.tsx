@@ -15,7 +15,7 @@ export default function useAnimate({ animating, setAnimate }: Props) {
     let currentLoad = 0
     function animate() {
       if (currentLoad < 100) {
-        currentLoad += 0.44
+        currentLoad += 0.64
         setLoad(currentLoad)
         requestId = requestAnimationFrame(animate)
       } else {
