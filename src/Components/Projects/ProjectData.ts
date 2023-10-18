@@ -25,7 +25,7 @@ const projects: ProjectType[] = [
       "Desktop Only! Habit Traker that I created for myself to be more consistent and to track my endeavors in different fields. React Redux for complex state management. React Router, Typescript for typesafety and Tailwind were used to complete this project. Code splitted for less bundle size.",
     alt: "habit tracker app screenshot",
     tech: [skills.react, skills.ts, skills.tailwind],
-    liveUrl: "thegame-oflife.netlify.app",
+    liveUrl: "https://thegame-oflife.netlify.app",
     gitHubUrl: "https://github.com/almasiwe11/Game-of-Life",
   },
   {
