@@ -30,7 +30,7 @@ const nav: NavType[] = [
     hover: "contact",
     EmptyIcon: GoMail,
     FullIcon: GoMail,
-    openNew: "mailto:awakenedduck@gmail.com",
+    openNew: "mailto:almasthedeveloper@gmail.com",
   },
 ]
 
