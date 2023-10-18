@@ -52,19 +52,19 @@
 
 .first::before {
   border-left: 2px solid rgb(255, 119, 0);
-  animation: firstAnimate steps(12) 0.7s forwards 1.7s;
+  animation: firstAnimate steps(12) 0.7s forwards 1.2s;
 }
 
 .second::before {
-  animation: secondAnimate steps(12) 0.7s forwards 2.4s;
+  animation: secondAnimate steps(12) 0.7s forwards 2s;
 }
 
 .third::before {
-  animation: secondAnimate steps(12) 0.7s forwards 3.1s;
+  animation: secondAnimate steps(12) 0.7s forwards 2.6s;
 }
 
 .fourth::before {
-  animation: secondAnimate steps(12) 0.7s forwards 3.8s;
+  animation: secondAnimate steps(12) 0.7s forwards 3.3s;
 }
 
 @keyframes firstAnimate {
@@ -96,7 +96,7 @@
 
 .navbar {
   opacity: 0;
-  animation: navbar 0.6s forwards 4.5s;
+  animation: navbar 0.6s forwards 4s;
 }
 
 @keyframes navbar {
